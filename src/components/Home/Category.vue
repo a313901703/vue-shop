@@ -4,35 +4,92 @@
         margin-bottom:10px;
     }
     .cate-item{
-        height:80px;
+        height:100px;
+        width:100%;
+        padding:15px 0;
     }
+    .cate-icon{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .cate-text{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .cate-text span{
+        color:#999;
+    }
+    .cate-icon img{
+        width:60px;
+        height:60px;
+    }
+    
 </style>
 <template>
     <div id="category">
-        <yd-grids-group :rows="3">
-            <yd-grids-item>
-                <img slot="icon" src="http://static.ydcss.com/ydui/img/logo.png">
-                <span slot="text">image</span>
-            </yd-grids-item>
-            <yd-grids-item>
-                <yd-icon slot="icon" name="home" color="#FF685D"></yd-icon>
-                <span slot="text">iconfont</span>
-            </yd-grids-item>
-            <yd-grids-item>
-                <yd-icon slot="icon" name="home" color="#FF685D"></yd-icon>
-                <span slot="text">iconfont</span>
-            </yd-grids-item>
-        </yd-grids-group>
+         <yd-flexbox>
+            <yd-flexbox-item>
+                <div class="cate-item">
+                    <div class="cate-icon">
+                        <img src="http://ooafrn5be.bkt.clouddn.com/cat1.png">
+                    </div>
+                    <div class="cate-text">
+                        <span>热卖爆品</span>
+                    </div>
+                </div>
+            </yd-flexbox-item>
+            <yd-flexbox-item>
+                <div class="cate-item">
+                    <div class="cate-icon">
+                        <img src="http://ooafrn5be.bkt.clouddn.com/cat2.png">
+                    </div>
+                    <div class="cate-text">
+                        <span>智慧生活</span>
+                    </div>
+                </div>
+            </yd-flexbox-item>
+            <yd-flexbox-item>
+                <div class="cate-item">
+                    <div class="cate-icon">
+                        <img src="http://ooafrn5be.bkt.clouddn.com/cat3.png">
+                    </div>
+                    <div class="cate-text">
+                        <span>好货清单</span>
+                    </div>
+                </div>
+            </yd-flexbox-item>
+            <yd-flexbox-item>
+                <div class="cate-item">
+                    <div class="cate-icon">
+                        <img src="http://ooafrn5be.bkt.clouddn.com/cat4.png">
+                    </div>
+                    <div class="cate-text">
+                        <span>智能家电</span>
+                    </div>
+                </div>
+            </yd-flexbox-item>
+            <yd-flexbox-item>
+                <div class="cate-item">
+                    <div class="cate-icon">
+                        <img src="http://ooafrn5be.bkt.clouddn.com/cat5.png">
+                    </div>
+                    <div class="cate-text">
+                        <span>分类5</span>
+                    </div>
+                </div>
+            </yd-flexbox-item>
+        </yd-flexbox>
     </div>
 </template>
 
 <script>
 import Vue from 'vue'
 import {FlexBox, FlexBoxItem} from 'vue-ydui/dist/lib.px/flexbox'
-import {GridsGroup, GridsItem} from 'vue-ydui/dist/lib.px/grids';
 
-Vue.component(GridsGroup.name, GridsGroup);
-Vue.component(GridsItem.name, GridsItem);
 Vue.component(FlexBox.name, FlexBox)
 Vue.component(FlexBoxItem.name, FlexBoxItem)
 
