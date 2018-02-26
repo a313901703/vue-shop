@@ -5,12 +5,12 @@
                 <yd-icon name="ucenter-outline" size="50px"></yd-icon>
             </div>
             <yd-flexbox-item>
-                <div class="header-body">
+                <div class="header-body" @click="routers">
                     <div id="username"><h4>WTF-ASDKJHLKJ12</h4></div>
                     <div><span>15958752447</span></div>
                 </div>
             </yd-flexbox-item>
-            <div class="header-right header-item">
+            <div class="header-right header-item" @click="routers">
                 <img slot="icon" src="../../imgs/right.png">   
             </div>
         </yd-flexbox>
@@ -18,10 +18,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import {Icons} from 'vue-ydui/dist/lib.px/icons';
-Vue.component(Icons.name, Icons);
-
 export default {
     name: 'my-header',
     data () {
@@ -29,6 +25,11 @@ export default {
                 
         } 
     },
+    methods:{
+        routers(){
+            this.$router.push('UserInfo')
+        }
+    }
 }
 </script>
 <style  scoped>

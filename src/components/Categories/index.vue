@@ -6,7 +6,7 @@
             <yd-scrolltab-panel :label="'分类' + n" icon="demo-icons-category1" v-for="n in 6" :key="n">
                 <div >
                     <yd-grids-group :rows="3">
-                        <yd-grids-item v-for="i in 6" :key="i">
+                        <yd-grids-item v-for="i in 6" :key="i" link="Products">
                             <img slot="icon" src="http://ooafrn5be.bkt.clouddn.com/category1.png">
                             <span slot="text">子分类{{i}}</span>
                         </yd-grids-item>

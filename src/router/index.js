@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '../components/Home/index'
 import Categories from '../components/Categories/index'
 import My from '../components/My/index'
+import UserInfo from '../components/My/UserInfo'
 import Paycart from '../components/Paycart/index'
 import Products from '../components/Products/index'
 Vue.use(Router)
@@ -34,6 +35,11 @@ export default new Router({
         path:'/Products',
         name: 'Products',
         component: Products
+    },
+    {
+        path:'/UserInfo',
+        name: 'UserInfo',
+        component: UserInfo
     },
   ]
 })

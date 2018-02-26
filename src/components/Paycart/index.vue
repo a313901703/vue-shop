@@ -8,8 +8,6 @@
                     <yd-flexbox-item align="top">
                         <div class="product-info-item">
                             <h5 class="product-name">三星 GALAXY S8 全网通 S8港版港行+曲屏手机 S8现货</h5>
-                        </div>
-                        <div class="product-info-item">
                             <span> <small class="product-props">6.2寸迷夜黑S8 +;港澳台;官方标配</small></span>  
                         </div>
                         <yd-flexbox>
@@ -80,9 +78,9 @@ export default {
         margin-right: 10px;
     }
     .product-info-item{
-        height:30px;
+        height:60px;
     }
-    .product-quantity{
+    .product-quantity,.product-props{
         color:#999;
     }
     .counter{

@@ -6,6 +6,7 @@
             </div>
         </yd-navbar>
         <lists :_lists="list" :_pageSize="pageSize" :_listType="listType"></lists>
+        <yd-backtop></yd-backtop>
     </div>
 </template>
 
@@ -64,8 +65,7 @@ export default {
     },
     methods:{
         back(){
-            console.log(this.$router)
-            //this.$router.go(-1);
+            this.$router.go(-1);
         }
     },
 }

@@ -90,10 +90,9 @@ export default {
      methods: {
         productDetail(){
             console.log('1231')
-            //this.$router.push({name:''})
+            //this.$router.push({name:'ProductDetail'})
         },
         loadList() {
-            console.log('开始加载')
             this.list = [...this.list, ...this.list];
             if (this.page == 3) {
                 this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.loadedDone');
@@ -101,7 +100,6 @@ export default {
             }
             this.page++;
             this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
-            console.log('page',this.page)
             // this.$http.get('http://list.ydui.org/getdata.php?type=backposition', {
             //     params: {
             //         page: this.page,
