@@ -15,12 +15,9 @@
 
 <script>
 import Vue from 'vue'
-import Tab from '../Tab'
 import MyHeader from './Header'
 import Orders from './Orders'
-import {CellGroup, CellItem} from 'vue-ydui/dist/lib.px/cell';
-Vue.component(CellGroup.name, CellGroup);
-Vue.component(CellItem.name, CellItem);
+import Tab from '../Tab.vue'
 
 export default {
     name: 'My',
@@ -30,9 +27,11 @@ export default {
             lists:[
                 {label:'我的收藏','icon':'like',img:'',color:'#ff685d'},
                 {label:'购物券','icon':'',img:'http://ooafrn5be.bkt.clouddn.com/gouwuquan.png',color:'#ff685d'},
-                {label:'订单','icon':'order',img:'',color:'#ff685d'},
-                {label:'安全','icon':'verifycode',img:'',color:'#ff685d'},
+                {label:'我的会员','icon':'',img:'/static/huiyuan-icon.png',color:'#ff685d'},
+                {label:'积分中心','icon':'',img:'/static/jifen-icon.png',color:'#ff685d'},
                 {label:'我的地址','icon':'location',img:'',color:'#ff685d'},
+                {label:'帮助与反馈','icon':'question',img:'',color:'#ff685d'},
+                {label:'客服中心','icon':'',img:'/static/kefu-icon.png',color:'#ff685d'},
                 {label:'更多','icon':'more',img:'',color:'#ff685d'},
             ],
         } 
@@ -40,6 +39,7 @@ export default {
     components:{
         'my-header':MyHeader,
         Orders,
+        Tab,
     }
 }
 </script>

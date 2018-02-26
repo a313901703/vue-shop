@@ -19,6 +19,14 @@
 .space{
     height:10px;
 }
+.product-price{
+    color:red;
+    font-size: 14px;
+}
+.product-delete-price{
+    color:#999;
+    text-decoration: line-through;
+}
 /*首页*/
 .slider img{
     height:150px;

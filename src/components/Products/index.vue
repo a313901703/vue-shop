@@ -1,33 +1,26 @@
 <template>
-    <div class="container">
-        <Slider></Slider>
-        <Category></Category>
-        <Advertisement></Advertisement>
-        <Products :_lists="list" :_pageSize="pageSize" :_listType="listType"></Products>
-        <Tab type="Home"></Tab>
+    <div>
+        <yd-navbar slot="navbar" title="商品列表" height="50px" fontSize="20px">
+            <div slot="left" @click="back">
+                <yd-navbar-back-icon></yd-navbar-back-icon>
+            </div>
+        </yd-navbar>
+        <lists :_lists="list" :_pageSize="pageSize" :_listType="listType"></lists>
     </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import Tab from '../Tab'
-import Slider from './Slider'
-import Category from './Category'
-import Advertisement from './Advertisement'
-import Products from './Products'
-Vue.component('Tab', Tab)
-Vue.component('Slider',Slider)
-Vue.component('Category',Category)
-Vue.component('Advertisement',Advertisement)
-Vue.component('Products',Products)
+import lists from '../Home/Products'
 
 export default {
-    name: 'Home',
-    //component:[Tab],
+    name: 'Products',
+    components:{
+        lists,
+    },
     data () {
-    return {
-            msg: 'Welcome to Your Vue.js',
-            listType:1,
+        return {
+            msg: '商品列表页',
+            listType:4,
             pageSize: 6,
             list: [
                 {
@@ -68,6 +61,14 @@ export default {
                 }
             ],
         } 
-    }
+    },
+    methods:{
+        back(){
+            console.log(this.$router)
+            //this.$router.go(-1);
+        }
+    },
 }
 </script>
+
+

@@ -20,10 +20,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import Tab from '../Tab'
-Vue.component('Tab', Tab)
-
 export default {
     name: 'Categories',
     data () {

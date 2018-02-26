@@ -6,7 +6,7 @@
         <yd-tabbar-item title="分类" link="/Categories" :active="selected('Categories')">
             <yd-icon name="shopcart-outline" slot="icon" size="20px"></yd-icon>
         </yd-tabbar-item>
-        <yd-tabbar-item title="购物车" link="#" dot :active="selected('paycart')">
+        <yd-tabbar-item title="购物车" link="Paycart"  :active="selected('Paycart')">
             <yd-icon name="shopcart-outline" slot="icon" size="20px"></yd-icon>
             <yd-badge slot="badge" type="danger">2</yd-badge>
         </yd-tabbar-item>

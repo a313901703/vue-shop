@@ -43,7 +43,7 @@
                 </div>
             </yd-flexbox-item>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="toProducts">
                     <div class="cate-icon">
                         <img src="http://ooafrn5be.bkt.clouddn.com/cat2.png">
                     </div>
@@ -53,7 +53,7 @@
                 </div>
             </yd-flexbox-item>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="toProducts">
                     <div class="cate-icon">
                         <img src="http://ooafrn5be.bkt.clouddn.com/cat3.png">
                     </div>
@@ -63,7 +63,7 @@
                 </div>
             </yd-flexbox-item>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="toProducts">
                     <div class="cate-icon">
                         <img src="http://ooafrn5be.bkt.clouddn.com/cat4.png">
                     </div>
@@ -73,7 +73,7 @@
                 </div>
             </yd-flexbox-item>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="toProducts">
                     <div class="cate-icon">
                         <img src="http://ooafrn5be.bkt.clouddn.com/cat5.png">
                     </div>
@@ -87,19 +87,18 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import {FlexBox, FlexBoxItem} from 'vue-ydui/dist/lib.px/flexbox'
-
-Vue.component(FlexBox.name, FlexBox)
-Vue.component(FlexBoxItem.name, FlexBoxItem)
-
 export default {
     name: 'Category',
     data () {
         return {
             msg: 'component Category'
         }
-    }
+    },
+    methods:{
+        toProducts(){
+            this.$router.push('Products')
+        },
+    },
 }
 </script>
 

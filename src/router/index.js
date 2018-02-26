@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '../components/Home/index'
 import Categories from '../components/Categories/index'
 import My from '../components/My/index'
+import Paycart from '../components/Paycart/index'
+import Products from '../components/Products/index'
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +24,16 @@ export default new Router({
         path: '/My',
         name: 'My',
         component: My
+    },
+    {
+        path: '/Paycart',
+        name: 'Paycart',
+        component: Paycart
+    },
+    {
+        path:'/Products',
+        name: 'Products',
+        component: Products
     },
   ]
 })
