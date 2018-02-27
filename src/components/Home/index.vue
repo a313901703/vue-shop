@@ -4,18 +4,17 @@
         <Category></Category>
         <Advertisement></Advertisement>
         <Products :_lists="list" :_pageSize="pageSize" :_listType="listType"></Products>
-        <Tab type="Home"></Tab>
     </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import Tab from '../Tab'
+// import Tab from '../Tab'
 import Slider from './Slider'
 import Category from './Category'
 import Advertisement from './Advertisement'
 import Products from './Products'
-Vue.component('Tab', Tab)
+// Vue.component('Tab', Tab)
 Vue.component('Slider',Slider)
 Vue.component('Category',Category)
 Vue.component('Advertisement',Advertisement)
@@ -31,38 +30,38 @@ export default {
             pageSize: 6,
             list: [
                 {
-                    img: "http://img1.shikee.com/try/2016/06/23/14381920926024616259.jpg",
-                    title: "标题标题标题标题标题1",
+                    img: "/static/product-slider1.jpg",
+                    title: "三星 GALAXY S8 全网通 S8港版港行+曲屏手机 S8现货",
                     marketprice: 56.23,
                     productprice: 89.36
                 },
                 {
-                    img: "http://img1.shikee.com/try/2016/06/21/10172020923917672923.jpg",
-                    title: "骆驼男装2016夏装男士短袖T恤 圆领衣服 印花男装体恤 半袖打底衫",
+                    img: "/static/product-slider2.jpg",
+                    title: "三星 GALAXY S8 全网通 S8港版港行+曲屏手机 S8现货",
                     marketprice: 56.23,
                     productprice: 89.36
                 },
                 {
-                    img: "http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg",
-                    title: "条纹短袖T恤男士韩版衣服大码潮流男装夏季圆领体恤2016新款半袖",
+                    img: "/static/product-slider3.jpg",
+                    title: "三星 GALAXY S8 全网通 S8港版港行+曲屏手机 S8现货",
                     marketprice: 56.23,
                     productprice: 89.36
                 },
                 {
-                    img: "http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg",
-                    title: "夏季青少年衣服男生潮牌t恤 男士 夏秋学生 日系棉短袖半袖男小衫",
+                    img: "/static/product-slider1.jpg",
+                    title: "三星 GALAXY S8 全网通 S8港版港行+曲屏手机 S8现货",
                     marketprice: 56.23,
                     productprice: 89.36
                 },
                 {
-                    img: "http://img1.shikee.com/try/2016/06/26/12365720933909085511.jpg",
-                    title: "2016夏装新款时尚潮流短袖T恤男纯棉V领日系青少年韩版夏季上衣服",
+                    img: "/static/product-slider2.jpg",
+                    title: "三星 GALAXY S8 全网通 S8港版港行+曲屏手机 S8现货",
                     marketprice: 56.23,
                     productprice: 89.36
                 },
                 {
-                    img: "http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg",
-                    title: "男装衣服男夏t恤 男士短袖t恤圆领夏季潮牌宽松原宿风半截袖男",
+                    img: "/static/product-slider3.jpg",
+                    title: "三星 GALAXY S8 全网通 S8港版港行+曲屏手机 S8现货",
                     marketprice: 56.23,
                     productprice: 89.36
                 }

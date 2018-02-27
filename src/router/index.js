@@ -7,14 +7,17 @@ import My from '../components/My/index'
 import UserInfo from '../components/My/UserInfo'
 import Paycart from '../components/Paycart/index'
 import Products from '../components/Products/index'
+import Product from '../components/Products/Product'
+import Orders from '../components/Orders/index'
+import Tab from '../components/Tab'
 Vue.use(Router)
 
 export default new Router({
     routes: [
     {
         path:'/',
-        component: Home,
-        name: 'Home'
+        component: Tab,
+        name: 'Tab'
     },
     {
         path: '/Categories',
@@ -37,9 +40,19 @@ export default new Router({
         component: Products
     },
     {
+        path:'/Product',
+        name: 'Product',
+        component: Product
+    },
+    {
         path:'/UserInfo',
         name: 'UserInfo',
         component: UserInfo
+    },
+    {
+        path:'/Orders',
+        name: 'Orders',
+        component: Orders
     },
   ]
 })

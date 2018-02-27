@@ -9,7 +9,6 @@
                 <span slot="text">{{item.label}}</span>
             </yd-grids-item>
         </yd-grids-group>
-        <Tab type="My"></Tab>
     </div>
 </template>
 
@@ -17,7 +16,6 @@
 import Vue from 'vue'
 import MyHeader from './Header'
 import Orders from './Orders'
-import Tab from '../Tab.vue'
 
 export default {
     name: 'My',
@@ -39,7 +37,6 @@ export default {
     components:{
         'my-header':MyHeader,
         Orders,
-        Tab,
     }
 }
 </script>

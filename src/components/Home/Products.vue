@@ -5,7 +5,7 @@
         </div> -->
         <yd-infinitescroll :callback="loadList" ref="infinitescrollDemo">
             <yd-list :theme="listType" slot="list">
-                <yd-list-item v-for="item, key in list" :key="key" v-on:click="productDetail">
+                <yd-list-item v-for="item, key in list" :key="key" v-on:click="productDetail" type="link" href="Product">
                     <img slot="img" :src="item.img">
                     <span slot="title">{{item.title}}</span>
                     <yd-list-other slot="other">
@@ -32,10 +32,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import {InfiniteScroll} from 'vue-ydui/dist/lib.px/infinitescroll'
-Vue.component(InfiniteScroll.name, InfiniteScroll);
-
 export default {
     name: 'Products',
     props:['_lists','_pageSize','_listType'],

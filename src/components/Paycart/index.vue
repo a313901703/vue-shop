@@ -39,13 +39,11 @@
                 <yd-button style="height:40px;width:80px;border-radius:0px;" shape="square" type="danger">结算</yd-button>
             </yd-flexbox>
         </div>
-        <Tab type="Paycart"></Tab>
     </div>
 </template>
 
 <script>
 import Nav from '../Nav'
-import Tab from '../Tab.vue'
 export default {
     name: 'Paycart',
     data () {

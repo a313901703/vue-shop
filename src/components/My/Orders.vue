@@ -33,7 +33,7 @@
     <div id="category">
          <yd-flexbox>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="routers('Orders')">
                     <div class="cate-icon">
                         <img src="../../imgs/dai-fa-huo.png">
                     </div>
@@ -43,7 +43,7 @@
                 </div>
             </yd-flexbox-item>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="routers('Orders')">
                     <div class="cate-icon">
                         <img src="../../imgs/dai-fa-huo.png">
                     </div>
@@ -53,7 +53,7 @@
                 </div>
             </yd-flexbox-item>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="routers('Orders')">
                     <div class="cate-icon">
                         <img src="../../imgs/dai-shou-huo.png">
                     </div>
@@ -63,7 +63,7 @@
                 </div>
             </yd-flexbox-item>
             <yd-flexbox-item>
-                <div class="cate-item">
+                <div class="cate-item" @click="routers('Orders')">
                     <div class="cate-icon">
                         <img src="../../imgs/dai-ping-jia.png">
                     </div>
@@ -83,7 +83,12 @@ export default {
         return {
                 
         } 
-    }
+    },
+    methods:{
+        routers(router){
+            this.$router.push({name:router})
+        }
+    },
 }
 </script>
 <style  scoped>

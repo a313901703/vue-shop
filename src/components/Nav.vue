@@ -14,12 +14,15 @@ export default {
     return {
             msg: '购物车页面',
             titleName:this.title,
-            leftItem:this.left ? this.left : false,
+            //leftItem:this.left ? this.left : false,
         } 
     },
     methods:{
         goBack(){
             this.$router.go(-1)
+        },
+        leftItem(){
+            return window.history.length > 1;
         }
     },
 }

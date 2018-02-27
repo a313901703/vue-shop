@@ -15,7 +15,6 @@
                 <div v-if="n === 6" style="height:50px"></div>
             </yd-scrolltab-panel>
         </yd-scrolltab>
-        <Tab type="Categories"></Tab>
     </yd-layout>
 </template>
 
