@@ -31,7 +31,7 @@
             </yd-flexbox>
         </div>
         <div class="lists">
-            <div class="order-items" v-for="i in 3" :key="n">
+            <div class="order-items" v-for="i in 3" :key="i">
                 <yd-flexbox class="order-products" v-for="n in 3" :key="n">
                     <img src="/static/sanxing-thumb.jpg" class="product-thumb">
                     <yd-flexbox-item align="top" >

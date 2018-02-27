@@ -22,6 +22,11 @@
 .space{
     height:10px;
 }
+.line{
+    width: 100%;
+    color:#e1e8eb;
+    height:1px;
+}
 .small-space{
     height:5px;
 }
@@ -48,6 +53,12 @@
     color:red;
     border:1px solid red;
 }
+.fixed-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
 /*首页*/
 .slider img{
     height:150px;

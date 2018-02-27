@@ -10,6 +10,7 @@ import Products from '../components/Products/index'
 import Product from '../components/Products/Product'
 import Orders from '../components/Orders/index'
 import Tab from '../components/Tab'
+import ConfirmOrder from '../components/Orders/ConfirmOrder'
 Vue.use(Router)
 
 export default new Router({
@@ -53,6 +54,11 @@ export default new Router({
         path:'/Orders',
         name: 'Orders',
         component: Orders
+    },
+    {
+        path:'/ConfirmOrder',
+        name: 'ConfirmOrder',
+        component: ConfirmOrder
     },
   ]
 })

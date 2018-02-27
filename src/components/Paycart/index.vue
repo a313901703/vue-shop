@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Nav title="购物车"></Nav>
+        <Nav title="购物车" :showGoBack="goBack"></Nav>
         <yd-checklist v-model="checklist" ref="productList" :label="false" :callback="change" color="#ff0033">
             <yd-checklist-item :val="n" v-for="n in products" :key="n">
                 <yd-flexbox style="padding: 10px 0;">
@@ -23,7 +23,7 @@
                 </yd-flexbox>
             </yd-checklist-item>
         </yd-checklist>
-        <div class="counter">
+        <div class="counter" :style="{bottom:goBack ? 0 : '50px'}">
             <yd-flexbox>
                 <yd-flexbox-item style="padding:0 15px">
                     <yd-checkbox 
@@ -31,12 +31,12 @@
                         shape="circle" 
                         :change="checkAll"
                         color="#ff0033"
-                        >全选</yd-checkbox>
+                        >全选</span></yd-checkbox>
                 </yd-flexbox-item>
                 <yd-flexbox-item style="text-align:right;padding-right:15px">
                     合计: <span style="color:red">￥ 1000</span>            
                 </yd-flexbox-item>
-                <yd-button style="height:40px;width:80px;border-radius:0px;" shape="square" type="danger">结算</yd-button>
+                <yd-button style="height:40px;width:80px;border-radius:0px;" shape="square" type="danger" @click.native="routers('ConfirmOrder')">结算</yd-button>
             </yd-flexbox>
         </div>
     </div>
@@ -52,6 +52,8 @@ export default {
             checklist: [],
             selectAll:false,
             products:[1,2,3],
+            goBack:this.$route.params.goBack ? this.$route.params.goBack : false,
+
         }
     },
     components:{
@@ -64,6 +66,9 @@ export default {
         checkAll() {
             this.selectAll = !this.selectAll;
             this.$refs.productList.$emit('ydui.checklist.checkall', this.selectAll);
+        },
+        routers(name,params={}){
+            this.$router.push({name,params})
         }
     },
 }
@@ -85,8 +90,7 @@ export default {
         height:40px;
         width:100%;
         background: #fff;
-        position: fixed;
-        bottom: 50px;
+        position: absolute;
         left:0;
     }
     .counter-item{

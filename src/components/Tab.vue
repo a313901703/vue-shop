@@ -18,8 +18,8 @@
             <yd-tabbar-item title="购物车" link="javascript:void(0)" type='a'  :active="isSelected('Paycart')">
                 <div slot="icon" @click="select('Paycart')">
                     <yd-icon name="shopcart-outline" slot="icon" size="20px"></yd-icon>
-                    <yd-badge slot="badge" type="danger">2</yd-badge>
                 </div>
+                <yd-badge slot="badge" type="danger">2</yd-badge>
             </yd-tabbar-item>
             <yd-tabbar-item title="个人中心" link="javascript:void(0)" type='a' :active="isSelected('My')">
                 <div slot="icon" @click="select('My')">

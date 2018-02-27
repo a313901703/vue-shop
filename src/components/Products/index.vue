@@ -1,10 +1,6 @@
 <template>
     <div>
-        <yd-navbar slot="navbar" title="商品列表" height="50px" fontSize="20px">
-            <div slot="left" @click="back">
-                <yd-navbar-back-icon></yd-navbar-back-icon>
-            </div>
-        </yd-navbar>
+        <Nav title="商品列表"></Nav>
         <lists :_lists="list" :_pageSize="pageSize" :_listType="listType"></lists>
         <yd-backtop></yd-backtop>
     </div>
@@ -12,11 +8,12 @@
 
 <script>
 import lists from '../Home/Products'
-
+import Nav from '../Nav'
 export default {
     name: 'Products',
     components:{
         lists,
+        Nav
     },
     data () {
         return {
@@ -62,11 +59,6 @@ export default {
                 }
             ],
         } 
-    },
-    methods:{
-        back(){
-            this.$router.go(-1);
-        }
     },
 }
 </script>

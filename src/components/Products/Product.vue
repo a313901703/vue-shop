@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Nav left="true" :title="title"></Nav>
+        <Nav :title="title"></Nav>
         <!--轮播-->
         <yd-slider autoplay="3000">
             <yd-slider-item>
@@ -61,10 +61,8 @@
                             </div>
                         </yd-flexbox-item>
                         <yd-flexbox-item>
-                            <div class="footer-item">
-                                <router-link to="Paycart">
-                                    <yd-icon name="shopcart-outline" size="25px" color="#FF685D"></yd-icon>
-                                </router-link>
+                            <div class="footer-item" @click="routers('Paycart',{goBack:true})">
+                                <yd-icon name="shopcart-outline" size="25px" color="#FF685D"></yd-icon>
                             </div>
                         </yd-flexbox-item>
                     </yd-flexbox>
@@ -92,7 +90,19 @@ export default {
         Nav,
         Formats,
         Comments,
-    }
+    },
+    methods:{
+        routers(name,params){
+            this.$router.push({name,params})
+        }
+    },
+    watch: {
+        $route (to, from) {
+            console.log('product')
+            console.log(to,from)
+            console.log(next)
+        }
+    },
 }
 </script>
 <style  scoped>
