@@ -15,10 +15,40 @@ Vue.use(YDUI)
 
 Vue.config.productionTip = false
 
+const store = new Vuex.Store({
+    state: {
+        isLoading: false
+    },
+    mutations: {
+        updateLoadingStatus(state, isLoading) {
+            state.isLoading = isLoading;
+        }
+    }
+});
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'
 })
+
+router.beforeEach((route, redirect, next) => {
+    /* 显示加载中动画 */
+    if (router.app.$dialog) {
+        router.app.$dialog.loading.open('加载中')
+    }
+    store.commit('updateLoadingStatus', true);
+    next();
+});
+
+router.afterEach(route => {
+    /* 隐藏加载中动画 */
+    if (router.app.$dialog) {
+        router.app.$dialog.loading.close()
+    }
+    store.commit('updateLoadingStatus', false);
+});

@@ -21,7 +21,7 @@
         </yd-flexbox>
         <yd-cell-group>
             <yd-cell-item arrow type="label">
-                <span class="input-group-text" slot="left">配送方式</span>
+                <span class="input-group-text" slot="left">配送费</span>
                 <span class="input-group-text" slot="right">￥6.00</span>
             </yd-cell-item>
             <yd-cell-item>
@@ -68,11 +68,6 @@
                 </yd-preview-item>
             </yd-preview>
         </yd-popup>
-
-        <yd-button size="large" type="danger" class="fixed-bottom" @click.native="showConfirm = true">提交订单</yd-button>
-       <!--  <div class="total-box">
-            <span>共3件商品  合计：<strong>￥8000.00</strong>(含运费￥20.00)</span>
-        </div> -->
     </div>  
 </template>
 <script>
