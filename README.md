@@ -1,6 +1,6 @@
 # v-shop
 
-> 简单的wap商城模板
+> 商城模板
 > 基于 vue 2 + vue-router + vuex + es6 + webpack + YDUI(样式模板)
 
 ## Build Setup
