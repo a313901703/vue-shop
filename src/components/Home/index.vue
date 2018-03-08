@@ -4,17 +4,17 @@
         <Category></Category>
         <Advertisement></Advertisement>
         <Products :_lists="list" :_pageSize="pageSize" :_listType="listType"></Products>
+        <Tab checked="Home"/>
     </div>
 </template>
 
 <script>
 import Vue from 'vue'
-// import Tab from '../Tab'
+import Tab from '../Tab'
 import Slider from './Slider'
 import Category from './Category'
 import Advertisement from './Advertisement'
 import Products from './Products'
-// Vue.component('Tab', Tab)
 Vue.component('Slider',Slider)
 Vue.component('Category',Category)
 Vue.component('Advertisement',Advertisement)
@@ -22,7 +22,7 @@ Vue.component('Products',Products)
 
 export default {
     name: 'Home',
-    //component:[Tab],
+    components:{Tab},
     data () {
     return {
             msg: 'Welcome to Your Vue.js',

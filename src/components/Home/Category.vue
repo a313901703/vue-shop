@@ -96,7 +96,7 @@ export default {
     },
     methods:{
         toProducts(){
-            this.$router.push('Products')
+            this.routers('Products')
         },
     },
 }

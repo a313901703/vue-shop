@@ -27,7 +27,7 @@ export default {
     },
     methods:{
         routers(){
-            this.$router.push('UserInfo')
+            this.routers('UserInfo')
         }
     }
 }

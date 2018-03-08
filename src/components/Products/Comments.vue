@@ -14,7 +14,7 @@
             <div class="list-body">
                 <span>很好很好很好很好很好很好很好很好很好很好很好很好</span>
                 <div class="small-space"></div>
-                <span style="color:#999">机身颜色迷夜黑;套餐类型：官方标配;存储64G</span>
+                <span style="color:#999">机身颜色迷夜黑;套餐类型:官方标配;存储64G</span>
             </div>
             <div class="list-footer">
                 <div class="comment-btn">查看全部</div>

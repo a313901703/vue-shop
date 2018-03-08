@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Nav title="购物车" :showGoBack="goBack"></Nav>
+        <Nav title="购物车"></Nav>
         <yd-checklist v-model="checklist" ref="productList" :label="false" :callback="change" color="#ff0033">
             <yd-checklist-item :val="n" v-for="n in products" :key="n">
                 <yd-flexbox style="padding: 10px 0;">
@@ -23,7 +23,7 @@
                 </yd-flexbox>
             </yd-checklist-item>
         </yd-checklist>
-        <div class="counter" :style="{bottom:goBack ? 0 : '50px'}">
+        <div class="counter" :style="{bottom:routerIndex ? 0 : '50px'}">
             <yd-flexbox>
                 <yd-flexbox-item style="padding:0 15px">
                     <yd-checkbox 
@@ -36,14 +36,18 @@
                 <yd-flexbox-item style="text-align:right;padding-right:15px">
                     合计: <span style="color:red">￥ 1000</span>            
                 </yd-flexbox-item>
-                <yd-button style="height:40px;width:80px;border-radius:0px;" shape="square" type="danger" @click.native="routers('ConfirmOrder')">结算</yd-button>
+                <yd-button style="height:40px;width:80px;border-radius:0px;" shape="square" type="danger" @click.native="routers('ConfirmOrder')">合计</yd-button>
             </yd-flexbox>
         </div>
+
+        <Tab checked="Paycart" v-show="routerIndex == 0"/>
+
     </div>
 </template>
 
 <script>
 import Nav from '../Nav'
+import Tab from '../Tab.vue'
 export default {
     name: 'Paycart',
     data () {
@@ -52,12 +56,12 @@ export default {
             checklist: [],
             selectAll:false,
             products:[1,2,3],
-            goBack:this.$route.params.goBack ? this.$route.params.goBack : false,
-
+            routerIndex:this.$store.state.routerIndex,
         }
     },
     components:{
         Nav,
+        Tab,
     },
     methods:{
         change:function(value, isCheckAll) {
@@ -67,9 +71,9 @@ export default {
             this.selectAll = !this.selectAll;
             this.$refs.productList.$emit('ydui.checklist.checkall', this.selectAll);
         },
-        routers(name,params={}){
-            this.$router.push({name,params})
-        }
+        // routers(name,params={}){
+        //     this.routers(name,params)
+        // }
     },
 }
 </script>

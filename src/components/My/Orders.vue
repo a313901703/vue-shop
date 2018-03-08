@@ -85,8 +85,8 @@ export default {
         } 
     },
     methods:{
-        routers(router){
-            this.$router.push({name:router})
+        routers(name){
+            this.routers(name)
         }
     },
 }

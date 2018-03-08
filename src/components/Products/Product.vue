@@ -92,16 +92,10 @@ export default {
         Comments,
     },
     methods:{
-        routers(name,params){
-            this.$router.push({name,params})
-        }
-    },
-    watch: {
-        $route (to, from) {
-            console.log('product')
-            console.log(to,from)
-            console.log(next)
-        }
+        // routers(name,params){
+        //     this
+        //     this.$router.push({name,params})
+        // }
     },
 }
 </script>

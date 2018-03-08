@@ -17,8 +17,8 @@ export default new Router({
     routes: [
     {
         path:'/',
-        component: Tab,
-        name: 'Tab'
+        component: Home,
+        name: 'Home'
     },
     {
         path: '/Categories',

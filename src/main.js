@@ -17,7 +17,8 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
     state: {
-        isLoading: false
+        isLoading: false,
+        routerIndex:0,
     },
     mutations: {
         updateLoadingStatus(state, isLoading) {
@@ -35,6 +36,22 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+Vue.prototype.routers = function(name,params={}){
+  this.$store.state.routerIndex += 1;
+  console.log(this.$store.state.routerIndex)
+  this.$router.push({name,params})
+}
+
+Vue.prototype.replaceRouter = function(name,params={}){
+  this.$store.state.routerIndex = 0;
+  this.$router.replace({name,params})
+}
+
+Vue.prototype.goback = function(){
+  this.$store.state.routerIndex -= 1;
+  this.$router.go(-1);
+}
 
 router.beforeEach((route, redirect, next) => {
     /* 显示加载中动画 */

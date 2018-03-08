@@ -5,20 +5,22 @@
         </div> -->
         <yd-infinitescroll :callback="loadList" ref="infinitescrollDemo">
             <yd-list :theme="listType" slot="list">
-                <yd-list-item v-for="item, key in list" :key="key" v-on:click="productDetail" type="link" href="Product">
-                    <img slot="img" :src="item.img">
-                    <span slot="title">{{item.title}}</span>
-                    <yd-list-other slot="other">
-                        部分描述信息
-                    </yd-list-other>
-                    <yd-list-other slot="other">
-                        <div class="other-lists">
-                            <span class="list-price"><em>¥</em>{{item.marketprice}}</span>
-                            <span class="list-del-price">¥{{item.productprice}}</span>
-                        </div>
-                        <div>已售3999</div>
-                    </yd-list-other>
-                </yd-list-item>
+                <div v-for="item, key in list" :key="key" v-on:click="routers('Product')">
+                    <yd-list-item  type="div">
+                        <img slot="img" :src="item.img">
+                        <span slot="title">{{item.title}}</span>
+                        <yd-list-other slot="other">
+                            部分描述信息
+                        </yd-list-other>
+                        <yd-list-other slot="other">
+                            <div class="other-lists">
+                                <span class="list-price"><em>¥</em>{{item.marketprice}}</span>
+                                <span class="list-del-price">¥{{item.productprice}}</span>
+                            </div>
+                            <div>已售3999</div>
+                        </yd-list-other>
+                    </yd-list-item>
+                </div>
             </yd-list>
 
             <!-- 数据全部加载完毕显示 -->
